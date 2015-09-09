@@ -22,6 +22,12 @@
  *         like Collection (x) where x is number of child objects such array renders.
  *       - Make better autodetection of web or console output mode.
  *       - Write english well. (sorry)
+ * 
+ * Example:
+ * session_start();
+ * PHPObjectBrowser::inspect($_SESSION);
+ * die();
+ * 
  */
 class PHPObjectBrowser {
 
