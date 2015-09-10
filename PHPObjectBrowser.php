@@ -208,7 +208,7 @@ class PHPObjectBrowser {
 	}
 
 	static public function autodetectPrintType() {
-		self::$_printType (!empty($_SERVER)) ? 'html' : 'linux';
+		self::$_printType = (!empty($_SERVER)) ? 'html' : 'linux';
 	}
 
 	static public function inspect($element, $matchPath = null, $returnString = false) {
