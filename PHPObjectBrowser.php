@@ -288,7 +288,7 @@ class PHPObjectBrowser {
 					echo "{$br}{$tabs}".self::colorContent(get_class($element) . " {", 'blue');
 				}
 				$path = $prevPath; //$prevPath . '/' . get_class($element);
-				$r = new ReflectionClass($element);
+				$r = new ReflectionObject($element);
 				$constants = $r->getConstants();
 				$pAccess = self::colorContent('const', 'dimgray', 'italic');
 				foreach($constants as $name => $value) {
