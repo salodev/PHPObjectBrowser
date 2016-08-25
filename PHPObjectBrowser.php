@@ -333,7 +333,12 @@ class PHPObjectBrowser {
 					echo "{$br}{$tabs}".self::colorContent('}', 'blue');
 				}
 			} else {
-				echo "{$br}{$tabs}{$element}";
+				if (is_string($element)) {
+					$string =htmlentities($element);
+					echo "{$br}{$tabs}{$string}";
+				} else {
+					echo "{$br}{$tabs}{$element}";
+				}
 			}
 		}
 	}
